@@ -4,13 +4,11 @@ const router = express.Router();
 
 
 const genres = [
-    {id: 1, name: "Highlife"},
-    {id: 2, name: "Hiplife"},
-    {id: 3, name: "Jazz"},
-    {id: 4, name: "R&B"},
-    {id: 5, name: "Country"},
-    {id: 6, name: "Soul"},
-    {id: 7, name: "Blues"},
+    {id: 1, name: "Horror"},
+    {id: 2, name: "thriller"},
+    {id: 3, name: "Sci-fi"},
+    {id: 4, name: "Comedy & drama"},
+    {id: 5, name: "Fantasy"}
 ];
 
 const check = (genre) => {
