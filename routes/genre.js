@@ -8,14 +8,13 @@ const genres = [
     {id: 2, name: "thriller"},
     {id: 3, name: "Sci-fi"},
     {id: 4, name: "Comedy & drama"},
-    {id: 5, name: "Fantasy"},
+    {id: 5, name: "Fantasy"}
 ];
 
 const check = (genre) => {
     const schema = {
-        name: Joi.string().required()
+        name: Joi.string().min(3).required()
     }
-
     return Joi.validate(genre, schema);
 }
 
