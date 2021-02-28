@@ -8,7 +8,7 @@ const genres = [
     {id: 2, name: "thriller"},
     {id: 3, name: "Sci-fi"},
     {id: 4, name: "Comedy & drama"},
-    {id: 5, name: "Fantasy"}
+    {id: 5, name: "Fantasy"},
 ];
 
 const check = (genre) => {
@@ -22,8 +22,7 @@ const check = (genre) => {
 
 //endpoint for display all genre of musics 
 router.get('/allgenre', (req, res) => {
-    const all_genres = genres.map((g) => (g));
-    res.send(all_genres); 
+    res.send(genres); 
 });
 
 router.get('/genre/:id', (req, res) => {
@@ -41,7 +40,7 @@ router.post('/allgenre', (req, res) => {
 
     const genre = {
         id: genres.length + 1,
-        name: req.body
+        name: req.body.name
     };
 
     genres.push(genre);
