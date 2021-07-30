@@ -3,6 +3,8 @@ const app = express();
 const genre = require('./routes/genre');
 const cors = require('cors');
 
+require("./dbConfig/dbConnect");
+
 const port = process.env.PORT || 3001;
 
 app.use(express.json());
